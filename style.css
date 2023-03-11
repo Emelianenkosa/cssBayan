@@ -17,8 +17,12 @@ img {
 }
 
 input {
-    /* appearance: none;
-    -webkit-appearance: none; */
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+label {
+    display: inline-block;
 }
 
 .wrapper {
@@ -36,6 +40,10 @@ input {
     color: black;
 }
 
+.accordion:hover .icon {
+    display: block;
+}
+
 .accordion-item {
     border-bottom: 1px solid chocolate;
     cursor: pointer;
@@ -49,10 +57,28 @@ input {
 .accordion-item:hover .accordion-meme{
     display: block;
 }
+.accordion-item:hover .icon{
+    transform: rotate(45deg);
+}
+
+.accordion-title-row {
+    display: flex;
+    justify-content: space-between;
+}
 
 .accordion-title {
     margin-bottom: 5px;
     cursor: pointer;
+}
+
+.icon {
+    display: none;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: url(/img/ico-cross.png);
+    background-size: cover;
+    /* transform: rotate(45deg); */
 }
 
 .accordion-meme {
@@ -72,6 +98,4 @@ input {
     font-size: 200px;
 }
 
-/* .accordion-meme:has(.meme-input) {
-    display: none;
-} */
+
