@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.2;
+    background-color: aliceblue;
+
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
+
+input {
+    /* appearance: none;
+    -webkit-appearance: none; */
+}
+
+.wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid chocolate;
+}
+
+.accordion:hover .accordion-item {
+    color: black;
+}
+
+.accordion-item {
+    border-bottom: 1px solid chocolate;
+    cursor: pointer;
+    color: blue;
+    transition: all 0.5s;
+}
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-item:hover .accordion-meme{
+    display: block;
+}
+
+.accordion-title {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.accordion-meme {
+    display: none;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+
+.accordion-meme:has(.meme-input:checked) {
+    display: block;
+}
+
+.accordion-title:has( input) {
+    font-size: 200px;
+}
+
+/* .accordion-meme:has(.meme-input) {
+    display: none;
+} */
